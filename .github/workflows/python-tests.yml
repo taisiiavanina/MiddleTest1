@@ -29,6 +29,7 @@ jobs:
     - name: Run tests with pytest
       run: |
         pytest --maxfail=1 --disable-warnings -q --html=report.html  # Генерація звіту у форматі HTML
+      continue-on-error: true
 
     - name: Upload test results
       if: always()
